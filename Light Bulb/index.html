@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Light Bulb On Off Effect - OT </title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="wire"></div>
+    <div class="light">
+      <div class="bulb">
+        <span></span>
+        <span></span>
+      </div>
+      <div class="switch">
+        <div class="btn" id="switchBtn"></div>
+      </div>
+    </div>
+    <!-- Sound on click-->
+    <audio id="audio" src="assets/click-sound.mp3" autostart="false"></audio>
+    <script>
+      let btn = document.querySelector('#switchBtn');
+      let audio = document.querySelector('#audio');
+      let body = document.querySelector('body');
+      btn.onclick = function() {
+        body.classList.toggle('on');
+        audio.play()
+      }
+    </script>
+  </body>
+  <!-- Inspired by Online Tutorials https://www.youtube.com/channel/UCbwXnUipZsLfUckBPsC7Jog-->
+</html>
